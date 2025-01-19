@@ -1,144 +1,252 @@
 * {
-    border: none;
-    border-radius: 0px;
-    font-weight: bold;
-    font-size: 10px;
-    min-height: 10px;
-}
-
-window#waybar {
-    background: rgba(0,0,0,0);
-}
-
-tooltip {
-    background: #11111b;
-    color: #cdd6f4;
-    border-radius: 7px;
-    border-width: 0px;
-}
-
-#workspaces button {
-    box-shadow: none;
-    background: #536d64;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-right: 4px;
-    padding-left: 4px;
-    color: #cddceb;
-    border: 1px solid #cddceb;
-}
-
-#workspaces button.active {
-    background: #bb7b3c;
-    color: #2d333c;
-    margin-right: 3px;
-    margin-left: 3px;
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-#workspaces button:hover {
-    background: #ac90f3;
-    color: #313244;
-}
-
-#taskbar button {
-    box-shadow: none;
-    background: #536d64;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-right: 4px;
-    padding-left: 4px;
-    color: #cddceb;
-    border: 1px solid #cddceb;
-}
-
-#taskbar button.active {
-    background: #bb7b3c;
-    color: #2d333c;
-    margin-right: 3px;
-    margin-left: 3px;
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-#taskbar button:hover {
-    background: #ac90f3;
-    color: #2d333c;
-}
-
-#clock {
-    box-shadow: none;
-    background: #a32f18;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-right: 3px;
-    padding-left: 3px;
-    color: #cddceb;
-    border: 1px solid #cddceb;
-}
-#cpu {
-    box-shadow: none;
-    background: #4224a4;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-right: 4px;
-    padding-left: 4px;
-    color: #cddceb;
-    border: 1px solid #cddceb;
-}
-#network {
-    box-shadow: none;
-    background: #259cae;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-right: 4px;
-    padding-left: 4px;
-    color: #cddceb;
-    border: 1px solid #cddceb;
-}
-
-#taskbar {
-    padding: 0px;
-}
-
-#custom-appmenu {
-    box-shadow: none;
-    background: #4126a2;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-right: 4px;
-    padding-left: 4px;
-    color: #cddceb;
-    border: 1px solid #cddceb;
-}
+    /*
+    #  Colors used in this Light Waybar Theme. This is just for reference.
+        --foreground : #242639;
+        --background : #AECCE6;
+        --blue	     : #464CE1;
+        --red	     : #DF373A;
+        --violet	 : #7F00FF;
+        --slate-grey : #708090;
+    */
+        
+        border: none;
+        border-radius: 0px;
+        font-weight: bold;
+        font-size: 14px;
+        min-height: 22px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    
+    window#waybar {
+        background: #AECCE6;
+        /*Uncomment the below item to add a border.*/
+        /*border: 1px solid #9DCBD7;*/
+        border-radius: 5px;
+    }
+    
+    #workspaces button {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #242639;
+    }
+    
+    #workspaces button.active {
+        background: #AECCE6;
+        color: #242639;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+    
+    #workspaces button:hover {
+        background: transparent;
+        color: #242639;
+    }
+    
+    #taskbar button {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #taskbar button.active {
+        background: transparent;
+        color: #242639;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+    
+    #taskbar button:hover {
+        /*Colors are reverted. Although the BG may not work everywhere*/
+        background: #242639;
+        color: #AECCE6;
+    }
+    
+    #clock {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-right: 6px;
+        margin-left: 6px;
+        padding-right: 3px;
+        padding-left: 3px;
+        color: #242639;
+    }
+    
+    #cpu {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #network {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #taskbar {
+        padding: 0px;
+    }
+    
+    #custom-appmenu {
+        /*
+        This is for the module app menu.
+        */
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 1px;
+        margin-left: 1px;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #pulseaudio {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-right: 12px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #memory {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #disk {
+        box-shadow: none;
+             text-shadow: none;
+         padding: 0px;
+         border-radius: 5px;
+         margin-top: 3px;
+         margin-bottom: 3px;
+         padding-right: 4px;
+         padding-left: 4px;
+         color: #242639;
+    }
+    
+    #tray {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-right: 4px;
+        padding-left: 4px;
+        color: #242639;
+    }
+    
+    #user {
+        box-shadow: none;
+             text-shadow: none;
+         padding: 0px;
+         border-radius: 5px;
+         margin-top: 3px;
+         margin-bottom: 3px;
+         padding-right: 4px;
+         padding-left: 4px;
+         color: #242639;
+    }
+    
+    #custom-quit {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 2px;
+        margin-left: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #242639;
+    }
+    
+    #custom-lock {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 2px;
+        margin-left: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #242639;
+    }
+    
+    #custom-reboot{
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 2px;
+        margin-left: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #242639;
+    }
+    
+    #custom-shutdown {
+        box-shadow: none;
+            text-shadow: none;
+        padding: 0px;
+        border-radius: 5px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 2px;
+        margin-left: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #242639;
+    }
+    
