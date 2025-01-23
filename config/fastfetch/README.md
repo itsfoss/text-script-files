@@ -6,11 +6,7 @@ In this repository, you can find some ready to use configuration file for Fastfe
 
 ### What to do
 
-Either download this repository as a Zip or clone this repository:
-
-```
-git clone <repolink here>
-```
+Download the contents of this repository.
 
 Now, create a directory (if not already there) called `~/.config/fastfetch`.
 
@@ -18,10 +14,10 @@ Now, create a directory (if not already there) called `~/.config/fastfetch`.
 mkdir -p ~/.config/fastfetch
 ```
 
-Copy the `myimages` directory and the required config file to the `~/.config/fastfetch` directory. Let's say use the `simple_1.jsonc` as my config. So, inside the repo folder, 
+Copy the `assets` directory and the required config file to the `~/.config/fastfetch` directory. Let's say use the `simple_1.jsonc` as my config. So, inside the repo folder, 
 
 ```
-cp -r myimages/ ~/.config/fastfetch
+cp -r assets/ ~/.config/fastfetch
 cp sample_1.jsonc ~/.config/fastfetch
 ```
 
