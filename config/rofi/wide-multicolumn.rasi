@@ -1,0 +1,181 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    font: "JetBrains Mono 14";
+}
+
+* {
+    selected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
+    window-background-color   : #181F28;
+    dark-shade-background     : #242639;
+    urgent-background         : #FF7377;
+    dark-border-color         : #1D1F21;
+    text-color                : #C4CBD4;
+    dark-text-color           : #3B3D40;
+    shaded-light-color        : @text-color;
+}
+
+window {
+    background-color: @window-background-color;
+    border-radius:    15;
+    width:            85%;
+    height:           70%;
+    transparency:     "real";
+    y-offset:         10;
+}
+
+// Main box is where the main items are stored. You can specify the items to
+// be displayed on the mainbox in "children" field.
+// Here, inputbar and listview are appearing in the main rofi window.
+// The orientation is set to vertical, so that the items appear one below the other.
+// If it is set to horizontal, the items will be placed side by side.
+mainbox {
+    border:  0;
+    padding: 0;
+    children: ["inputbar", "listview"];
+    orientation: vertical;
+    spacing: 5;
+}
+
+message {
+    border:       0px 0px 0px ;
+    border-color: @dark-border-color;
+    padding:      1px ;
+}
+
+textbox {
+    text-color: @text-color;
+}
+
+//The part of rofi, where the application names are displayed.
+//Here, a 6 column view is used, to make rofi appear as a big application
+// launcher, with possibly the name of all applications.
+listview {
+    fixed-height: 0;
+    border: 0;
+    border-color: @dark-border-color;
+    scrollbar:    false;
+    padding:      10px;
+    border-radius: 10px;
+    columns: 6;
+}
+
+element {
+    border-radius: 5px;
+    padding: 5px ;
+    padding-left: 10px;
+    orientation: horizontal;
+    margin-left: 15px;
+
+    //Element with Icon and Text. Change the order for appearance change.
+    // You can remove the "element-icon" to disable displaying icon adjacent to app names.
+    children: [ element-icon, element-text ];
+    spacing: 5px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       @text-color;
+    padding:          5px;
+}
+
+element.normal.normal {
+    background-color: transparent;
+    text-color:       @text-color;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @dark-text-color;
+}
+
+element.normal.active {
+    text-color:       @dark-text-color;
+}
+
+element.selected.normal {
+    background-color: @dark-shade-background;
+    text-color: @text-color;
+    border-radius: 12px;
+}
+
+element.selected.urgent {
+    background-color: @urgent-background;
+    text-color:       @dark-text-color;
+    border: 1;
+    border-radius: 20px;
+}
+
+element.selected.active {
+    background-color: @dark-shade-background;
+    text-color:       @text-color;
+    border: 1;
+    border-radius: 20px;
+}
+
+//Making the background transparent allows us to disabled the alternate row
+//colors in rofi. If you need alternate row colors, you can either define a 
+//color at the top and call it here, or directly paste the color code instead
+//of the transparent entry.
+element.alternate.normal {
+    background-color: transparent;
+    text-color:       @text-color;
+}
+
+element.alternate.urgent {
+    background-color: transparent;
+    text-color:       @dark-text-color;
+}
+
+element.alternate.active {
+    background-color: transparent;
+    text-color:       @text-color;
+}
+
+//Scrollbar settings, if enabled.
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: @shaded-light-color;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @text-color;
+    padding:    5px 5px 5px 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 10px;
+    children:   [entry,case-indicator];
+}
+
+case-indicator {
+    spacing:    0;
+    text-color: @text-color;
+}
+
+//This is where the prompt entry settings like placeholder text, etc is defined.
+//Nerd font should be installed to make placeholder icons visible.
+entry {
+    spacing:    0;
+    background-color: @dark-shade-background;
+    border-radius: 5px;
+    padding: 10px;
+    text-color: @text-color;
+    placeholder: "  Search Apps";
+}
+
+prompt {
+    spacing:    0;
+    text-color: @text-color;
+    padding: 5px;
+}
+
+textbox-prompt-colon {
+    padding: 5px;
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @text-color;
+}
