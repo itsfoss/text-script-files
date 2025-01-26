@@ -32,5 +32,13 @@ Wide Multi-column
 
 [Wide Multi-column config file](./wide-multicolumn.rasi)
 
+Combi-mode 1
+
+![Rofi Combi Mode with several modes enabled.](./screenshots/rofi-combi-mode-.png)
+
+This needs the [rofi-calc](https://github.com/svenstaro/rofi-calc) module to be installed.
+
+[Combi-mode 1 config file](./combi-mode-1.rasi)
+
 Todo
 - [ ] Add more rofi config files

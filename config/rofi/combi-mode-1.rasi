@@ -1,0 +1,271 @@
+configuration {
+    modi                :   "drun,filebrowser,calc,window";
+    show-icons          :                             true;
+    /*kb-mode-next        :            "Super+Control+space";*/
+    display-drun        :                           "Apps";
+    display-filebrowser :                          "Files";
+    display-calc        :                           "Calc";
+    display-window      :                         "Window";
+	drun-display-format :                         "{name}";
+	window-format       :                   " {w}   {c}";
+    filebrowser {
+
+      /* 
+      ##############################################################
+      ###           Directory the file browser starts in.        ###
+      ##############################################################
+      */
+      directory        : "/home/$USER";
+      
+      
+        /*#################### SORTING METHOD ######################
+        ### Sorting method used here is based on name. Other po- ###
+        ### ible values are:                                     ###
+        ###   - "name"                                           ### 
+        ###   - "mtime" - Based on modification time.            ###
+        ###   - "atime" - Based on access time.                  ###
+        ###   - "ctime" - Based on change time.                  ###
+        ##########################################################*/
+     
+      sorting-method    :     "name";
+
+       /*#################### ITEM GROUPING ########################
+       ###              Group directories before files           ###
+       ###########################################################*/
+      
+      directories-first :       true;
+      
+      show-hidden       :       true;
+         
+    /** return 1 on cancel. */
+      cancel-returns-1  :       true;
+      }
+  
+}
+
+
+/*####################### DEFINING COLORS ###########################
+###################################################################*/
+
+
+* {
+    window-background   :   #181F28;
+    shaded-dark-one     :   #1D1F21;
+    shaded-dark-two     :   #585E6C;
+    shaded-dark-three   :   #1A1B26;
+    shaded-dark-four    :   #2E3440;
+    shaded-dark-five    :   #23273A;
+    shaded-light        :   #F9F9F9;
+    light-blue          :   #9BCBDA;
+    teal-blue           :   #27A1B9;
+    neon-blue           :   #4491ED;
+    neon-red            :   #F4364C;
+    text-color          :   #C4CBD4;
+
+}
+
+
+/*######################### MAIN ROFI WINDOW ##########################
+#####################################################################*/
+
+
+window {
+    background-color    :       @window-background;
+    padding             :                        5;
+    border-radius       :                       15;
+    width               :                      25%;
+    height              :                      60%;
+    transparency        :                   "real";
+    y-offset            :                       10;
+}
+
+/*######################### ITEMS IN ROFI #############################
+### A vertical bar with an input bar at the top and listiview below ###
+### below the input bar. The bottom item is a mode-switcher, that   ###
+### allow you to switch between the various combi modes defined in  ###
+### the configuration section.                                      ###
+#####################################################################*/
+
+
+mainbox {
+    border              :                                                         0;
+    padding             :                                                         0;
+    children            :      ["inputbar", "message", "listview", "mode-switcher"];
+    orientation         :                                                  vertical;
+    spacing             :                                                         10;
+}
+
+message {
+    border              :       0px 0px 0px ;
+    border-color        :   @shaded-dark-one;
+    padding             :               1px ;
+}
+
+textbox {
+    text-color          :        @text-color;
+}
+
+
+/*###################### DEFINING LISTVIEW ###########################
+### The place where the app names are listed. The view is a one    ###
+###                     column view.                               ###
+####################################################################*/
+
+
+listview {
+    fixed-height        :                  0;
+    spacing             :                5px;
+    scrollbar           :              false;
+    padding             :               10px;
+    border-radius       :               10px;
+    columns             :                  1;
+}
+
+
+/*######################### APP APPEARANCE ############################
+### In the list view, the applications appearance will be the app   ###
+### icon followed by the app name This is controlled in the         ###
+### "children" key. Rearrange/remove this for modifications         ###
+#####################################################################*/
+
+
+element {
+    border-radius       :                                  5px;
+    padding             :                                  5px;
+    padding-left        :                                 10px;
+    orientation         :                           horizontal;
+    margin-left         :                                 15px;
+    children            :       [ element-icon, element-text ];
+    spacing             :                                  5px;
+    border-color        :                          @light-blue;
+    background-color    :                          transparent;
+}
+
+element-text {
+    background-color    :         transparent;
+    text-color          :             inherit;
+    padding             :                 5px;
+}
+
+element.normal.normal {
+    background-color    :         transparent;
+    text-color          :         @text-color;
+}
+
+element.normal.urgent {
+    background-color    :    @shaded-dark-two;
+    text-color          :         @text-color;
+}
+
+element.normal.active {
+    text-color          :         @text-color;
+}
+
+element.selected.normal {
+    background-color    :  @shaded-dark-three;
+    text-color          :         @light-blue;
+    border-color        :          @teal-blue;
+    border-radius       :                12px;
+}
+
+element.selected.urgent {
+    background-color    :           @neon-red;
+    text-color          :         @text-color;
+    border              :                   1;
+    border-radius       :                20px;
+}
+
+element.selected.active {
+    background-color    :          @neon-blue;
+    text-color          :       @shaded-light;
+    border              :                   1;
+    border-radius       :                20px;
+}
+
+element.alternate.normal {
+    background-color    :         transparent;
+    text-color          :         @text-color;
+}
+
+element.alternate.urgent {
+    background-color    :         transparent;
+    text-color          :         @text-color;
+}
+
+element.alternate.active {
+    background-color    :         transparent;
+    text-color          :         @text-color;
+}
+
+scrollbar {
+    width               :                 4px;
+    border              :                   0;
+    handle-color        :  @normal-foreground;
+    handle-width        :                 8px;
+    padding             :                   0;
+}
+
+mode-switcher {
+    enabled             :                true;
+    border              :                 0px;
+    border-color        :         @text-color;
+    border-radius       :                10px;
+    spacing             :                 5px;
+    width               :               200px;
+}
+
+button {
+    padding             :                 5px;
+    border-radius       :                10px;
+    text-color          :         @text-color;
+    background-color    :   @shaded-dark-four;
+}
+
+button.selected {
+    background-color    :         @light-blue;
+    text-color          :   @shaded-dark-four;
+}
+
+
+/*############################### INPUT BAR ###################################
+###     This is the input bar group. We define what to appear in the        ###
+###     input bar area. This is defined in the "children" key. The text     ###
+###     prompt in the input bar is configured using the "entry" item.       ###
+#############################################################################*/
+
+
+inputbar {
+    spacing             :                                                    0;
+    text-color          :                                          @text-color;
+    padding             :                                      5px 5px 5px 5px;
+    background-color    :                                          transparent;
+    border-radius       :                                                  5px;
+    margin              :                                      5px 5px 5px 5px;
+    children            :   [prompt,textbox-prompt-colon,entry,case-indicator];
+}
+
+case-indicator {
+    spacing             :                   0;
+    text-color          :         @text-color;
+}
+
+entry {
+    spacing             :                   0;
+    background-color    :   @shaded-dark-five;
+    border-radius       :                 5px;
+    padding             :                10px;
+    text-color          :         @text-color;
+    placeholder         :       "Search Apps";
+}
+
+prompt {
+    spacing             :                   0;
+    text-color          :         @text-color;
+    padding             :                 5px;
+}
+
+textbox-prompt-colon {
+    padding             :                 5px;
+    margin              :  0px 0.3em 0em 0em ;
+    text-color          :         @text-color;
+}
