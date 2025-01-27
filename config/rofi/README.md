@@ -40,5 +40,13 @@ This needs the [rofi-calc](https://github.com/svenstaro/rofi-calc) module to be 
 
 [Combi-mode 1 config file](./combi-mode-1.rasi)
 
+Simple BG 1
+
+![Simple BG 1 Rofi theme with a background image.](./screenshots/rofi-simple-bg-1.png)
+
+You can check for additional image backgroun files in the assets folder.
+
+[Simple-bg-1 config file](./simple-bg-1.rasi)
+
 Todo
 - [ ] Add more rofi config files
