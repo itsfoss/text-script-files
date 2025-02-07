@@ -1,0 +1,18 @@
+keybind=ctrl+a>t=new_tab
+keybind=ctrl+a>o=toggle_tab_overview
+keybind=ctrl+a>n=next_tab
+keybind=ctrl+a>p=previous_tab
+keybind=ctrl+a>right=new_split:right
+keybind=ctrl+a>down=new_split:down
+keybind=shift+ctrl+right=goto_split:right
+keybind=shift+ctrl+left=goto_split:left
+
+# Change to the goto_split option top and bottom to up and down.
+keybind=shift+ctrl+up=goto_split:up
+keybind=shift+ctrl+down=goto_split:down
+
+keybind=ctrl+a>r=reload_config
+keybind=shift+ctrl+a>t=toggle_window_decorations
+keybind=ctrl+a>e=equalize_splits
+
+# keybind = performable:ctrl+c=copy_to_clipboard

@@ -1,0 +1,14 @@
+config-file		        =	 ~/.config/ghostty/keybinds
+theme			        =	 Adventure
+mouse-hide-while-typing	=	 true
+gtk-tabs-location	    =	 bottom
+scrollback-limit	    =	 10000
+window-theme		    =	 system
+window-height		    =	 25
+window-width		    =	 110
+focus-follows-mouse	    =	 true
+command			        =	 bash
+gtk-adwaita		        =	 true
+desktop-notifications	=	 true
+window-padding-x        =    10,10
+window-padding-y        =    10,10
