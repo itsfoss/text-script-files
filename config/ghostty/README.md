@@ -31,6 +31,10 @@ ghostty +show-config --default --docs | less
 
 ## Keybindings set in this configuration
 
+Below, Trigger sequence are used for most of the actions. That is, press the first combination (CTRL + A) and then press the said key to trigger the mentioned action.
+
+This is what the form `CTRL + A T` means.
+
 |             Function             |         Keybinding         |
 | -------------------------------- | -------------------------- |
 | Open a new tab                   | CTRL + A T                 |
