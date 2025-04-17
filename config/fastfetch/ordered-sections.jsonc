@@ -1,0 +1,186 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    	"source": "~/.config/fastfetch/assets/jedi.png",
+    	"type": "kitty-direct",
+    	"padding": {
+    		"top": 1,
+            "left": 6
+    	},
+      "width": 30,
+      "height": 30
+  },
+  "display": {
+    "separator": "  "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─➤  HARDWARE ⮜─────────────────────────────────────────────╮",
+      "outputColor": "36"
+    },
+    {
+      "type": "custom",
+      "format": "╰─┬──────────────────────────────────────────────────────────╯",
+      "outputColor": "36"
+    },
+    {
+      "type": "chassis",
+      "outputColor": "38;5;208",
+      "key": "  ├ ",
+      "keyColor": "36"
+    },
+    {
+      "type": "cpu",
+      "outputColor": "38;5;208",
+      "key": "  ├ ",
+      "keyColor": "36"
+    },
+    {
+      "type": "gpu",
+      "outputColor": "38;5;208",
+      "key": "  ├ ",
+      "keyColor": "36"
+    },
+    {
+      "type": "memory",
+      "outputColor": "38;5;208",
+      "key": "  ├ ",
+      "keyColor": "36"
+    },
+    {
+      "type": "disk",
+      "outputColor": "38;5;208",
+      "key": "  ├ ",
+      "keyColor": "36"
+    },
+    {
+      "type": "display",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "battery",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "custom",
+      "format": "  ╰──────────────────────────────────────────────────────────╯",
+      "outputColor": "36"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─➤  SOFTWARE ⮜─────────────────────────────────────────────╮",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "custom",
+      "format": "╰─┬──────────────────────────────────────────────────────────╯",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "os",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "kernel",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "shell",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "packages",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "terminal",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "wm",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "de",
+      "key": "  ├ ",
+      "keyColor": "38;5;208",
+      "outputColor": "36"
+    },
+    {
+      "type": "custom",
+      "format": "  ╰──────────────────────────────────────────────────────────╯",
+      "outputColor": "38;5;208"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─➤  CUSTOMIZATION ⮜─────────────────────────────────────────╮",
+      "outputColor": "36"
+    },
+    {
+      "type": "custom",
+      "format": "╰─┬───────────────────────────────────────────────────────────╯",
+      "outputColor": "36"
+    },
+    {
+      "type": "theme",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "icons",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "wmtheme",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "font",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "terminalfont",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "cursor",
+      "key": "  ├ ",
+      "keyColor": "36",
+      "outputColor": "38;5;208"
+    },
+    {
+      "type": "custom",
+      "format": "  ╰──────────────────────────────────────────────────────────╯",
+      "outputColor": "36"
+    }
+  ]
+}

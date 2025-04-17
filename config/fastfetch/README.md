@@ -46,6 +46,10 @@ fastfetch --config ~/.config/fastfetch/sample_1.jsonc
 
 ![Sample 2 Configuration](./screenshots/sample_2.png)
 
+[Ordered-sections.jsonc](./ordered-sections.jsonc)
+
+![Ordered Sections Configuration screenshot](./screenshots/ordered-sections.png)
+
 The above configuration works best in wide terminal (100x25).
 
 
