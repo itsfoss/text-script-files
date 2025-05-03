@@ -1,0 +1,61 @@
+format = """
+[](bg: #45FFCA)\
+$username\
+[](bg: #45FFCA)\
+[](bg: #FFB6D9)\
+$directory\
+[](bg: #FFB6D9)\
+[](bg: #FD8302)\
+$git_branch\
+$git_status\
+[](bg: #FD8302)\
+[](bg: #D67BFF)\
+$time\
+[](bg: #D67BFF)\
+[](bg: #FEFFAC)\
+$cmd_duration\
+[ ](bg: #FEFFAC)\
+"""
+
+# Add a new line at start
+add_newline = true
+
+[directory]
+style = "bg:#FFB6D9 fg:#000000"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[username]
+style_user = 'fg:#000000 bg:#45FFCA'
+style_root = 'fg:#ff0000 bg:#45FFCA'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[git_branch]
+symbol = ""
+style = "bg:#FD8302 fg:#000000"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#FD8302 fg:#000000"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%b %d, %I:%M %P" # Hour:Minute Format
+style = "bg:#D67BFF fg:#000000"
+format = "[ $time ]($style)"
+
+[cmd_duration]
+disabled = false
+min_time = 2000
+style = 'bg:#FEFFAC fg:#000000'
+format = '[ Took $duration!]($style)'

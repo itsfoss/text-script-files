@@ -1,0 +1,166 @@
+format = """
+[ ](#4c566a)\
+$os\
+[](bg:#2e3440 fg:#4c566a)\
+[](bg:#4c566a fg:#2e3440)\
+[](bg:#2e3440 fg:#4c566a)\
+[](bg:#4c566a fg:#2e3440)\
+[ ](bg:#2e3440 fg:#4c566a)\
+$username\
+[](bg:#4c566a fg:#2e3440)\
+$directory\
+[](bg:#3b4252 fg:#4c566a)\
+$git_branch\
+$git_status\
+[](fg:#3b4252 bg:#2e3440)\
+[](fg:#2e3440 bg:#4c566a)\
+$cmd_duration\
+[](fg:#4c566a bg:#434c5e)\
+$c\
+$cpp\
+$golang\
+$haskell\
+$java\
+$nodejs\
+$python\
+$rust\
+[](bg:#3b4252 fg:#434c5e)\
+$time\
+[ ](fg:#3b4252)\
+"""
+
+# A new line at the beginning
+add_newline = true
+
+[username]
+show_always = true
+style_user = "bg:#2e3440 fg:#ffffff"
+style_root = "bg:#2e3440"
+format = '[$user ]($style)'
+disabled = false
+
+# Display OS
+[os]
+style = "bg:#4c566a"
+disabled = false # Disabled by default
+
+# Supported OS Symbols in this prompt
+[os.symbols]
+AlmaLinux = ""
+Alpine = ""
+Android = ""
+Arch = "󰣇"
+Artix = ""
+CachyOS = ""
+CentOS = ""
+Debian = ""
+DragonFly = ""
+EndeavourOS = " "
+Fedora = ""
+FreeBSD = ""
+Garuda = ""
+Gentoo = ""
+Kali = ""
+Linux = ""
+Macos = ""
+Manjaro = ""
+Mint = "󰣭"
+NetBSD = "🚩 "
+NixOS = "󱄅"
+Nobara = ""
+OpenBSD = ""
+openSUSE = ""
+OracleLinux = "󰫼"
+Pop = ""
+Raspbian = ""
+Redhat = ""
+RedHatEnterprise = ""
+RockyLinux = ""
+Solus = ""
+SUSE = ""
+Ubuntu = ""
+Unknown = ""
+Void = ""
+Windows = ""
+
+[directory]
+style = "bg:#4c566a fg:#000000"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#3b4252 fg:#000000"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#3b4252 fg:#000000"
+format = '[$all_status$ahead_behind ]($style)'
+
+
+[time]
+disabled = false
+time_format = "%b %d, %I:%M %P" # Hour:Minute Format
+style = "bg:#3b4252 fg:#ffffff"
+format = "[ $time ]($style)"
+
+[cmd_duration]
+disabled = false
+min_time = 2000
+style = 'bg:#4c566a fg:#000000'
+format = '[ Took $duration!]($style)'
+
+[c]
+symbol = "C "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ $symbol($version(-$name) )]($style)'
+disabled = false
+
+[cpp]
+symbol = " "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ $symbol($version(-$name) )]($style)'
+disabled = false
+
+[golang]
+symbol = " "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ $symbol($version )]($style)'
+disabled = false
+
+[haskell]
+symbol = "󰲒 "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ $symbol($version )]($style)'
+disabled = false
+
+[java]
+symbol = " "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ ${symbol}(${version} )]($style)'
+disabled = false
+
+[nodejs]
+symbol = " "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ $symbol($version )]($style)'
+disabled = false
+
+[rust]
+symbol = " "
+style = "bg:#434c5e fg:#ffffff"
+format = '[ $symbol($version )]($style)'
+disabled = false
+
+[python]
+symbol = " "
+format = '[ ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = "bg:#434c5e fg:#ffffff"
+disabled = false
