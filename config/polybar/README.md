@@ -53,7 +53,7 @@ Paste this value in `[bar/mybar]` section as `monitor` value.
 
 If you are on Linux Mint, you should be using the `mintupdates.sh` file. This is because, we are using the `mintupdate-cli` command to get package update number.
 
-Download this file and paste it inside the `~/.config` folder.
+Download this file and paste it inside the `~/.config/polybar/` folder.
 
 Now, open the `config.ini` file in a text editor and go to the `pacupdate` module. You can use the search feature in the editor.
 
