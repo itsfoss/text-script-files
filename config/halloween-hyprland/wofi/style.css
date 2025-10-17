@@ -1,0 +1,117 @@
+/* Wofi uses a config and css to control the look and feel
+This is the CSS part of Wofi. If you have any doubt regarding the parts of a Wofi window, refer
+to the Arch Linux man page for Wofi at https://man.archlinux.org/man/wofi.7.en#WIDGET_LAYOUT
+This has a proper description of some option and the window layout.*/
+
+/* In this config, most of the background color is set to transparent.
+This is because, a blur effect is applied later on the Hyprland config
+So, if you are using this config file for stand alone Wofi, please either
+change the background colors, or find some way to add blur. Else, the text
+may appear unreadable over windows.*/
+
+/* Global font styles */
+* {
+    font-size: 16px;
+    font-family: "Creepster", monospace;
+}
+
+/* Entire Wofi window */
+window {
+    /* Setting the background-color: to any other color creates a
+  sharp corner to the round border.  */
+    background-color: transparent;
+    border: 0;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    transform-origin: center center;
+    transition: transform 0.1s ease;
+}
+
+/* Outer container box for everything */
+#outer-box {
+    border: 3px solid #7fbbb3;
+    border-radius: 50px;
+    background-color: transparent;
+    padding: 10px;
+}
+
+/* Input box for filtering items */
+#input {
+    background-color: transparent;
+    border-radius: 50px;
+    margin: 10px 10px 0 10px;
+    color: #d8dee9; /* text color */
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* Scroll container holding inner-box */
+#scroll {
+    background-color: transparent;
+    color: #8a8da1; /* text color */
+    margin: 3px 5px 5px 5px;
+    border-radius: 50px;
+}
+
+/* Inner box containing all entries */
+#inner-box {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+/* Entry for each selectable option */
+#entry {
+    border: 0;
+    border-radius: 50px;
+}
+
+/* Currently focused/selected entry */
+#entry:selected {
+    background-color: transparent;
+    padding: 5px;
+    border: 3px solid #7fbbb3;
+    border-radius: 50px;
+    color: #2e3440;
+}
+
+/* Text inside entries */
+#text {
+    padding: 5px;
+}
+
+/* Images inside entries */
+#img {
+    padding: 2px;
+}
+
+/* Special styling for images inside input */
+#input image {
+    border: none;
+    color: #75b3b7;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 6px 20px;
+    margin-right: 6px;
+}
+
+/* Expander box */
+#expander-box {
+    background-color: transparent; /* light background */
+    color: #2e3440; /* dark text */
+    border-radius: 50px;
+}
+
+/* Entries inside expander */
+expander > list > #entry {
+    background-color: transparent;
+    color: #2e3440;
+    border-radius: 50px;
+}
+
+#text:selected {
+    color: #75b3b7;
+}

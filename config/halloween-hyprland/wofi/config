@@ -1,0 +1,34 @@
+# Height and width of the Wofi window
+height=30%
+width=20%
+
+# Specifies the term to use when running a program in a terminal.
+term=kitty
+
+# Don't shows all the entries in path. That is only bash is shown
+# If there is /bin/bash and /usr/bin/bash
+show-all=false
+
+# Enter the text to appear in the search bar.
+prompt=
+
+# Number of columns in Wofi
+columns=1
+
+# Case insensitive search
+insensitive=true
+
+# Set default or alphabetical sort sort_order
+sort_order=default
+
+# Vertical orientation. If you want a dmenu like top panel appearance,
+# You may set it to horizontal. But that need separate CSS tweaks.
+# So, better keep vertical for proper functioning.
+orientation=vertical
+
+# Does the menu show app icon or note. False gives a clean look without
+# any app icons.
+allow_images=false
+
+# Tab key is used to expand items in the menu.
+key_expand=Tab

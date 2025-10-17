@@ -1,0 +1,123 @@
+# This is the halloween themed Starship prompt.
+format = """
+[ ](bg:#0c4347 fg:#75b3b7)\
+$os\
+$username\
+[](bg:#75b3b7 fg:#0c4347)\
+$directory\
+[](fg:#75b3b7 bg:#0c4347)\
+$git_branch\
+$git_status\
+[](fg:#0c4347 bg:#75b3b7)\
+$time\
+[](fg:#75b3b7 bg:#0c4347)\
+$cmd_duration\
+[  ](fg:#0c4347)\
+"""
+# A new line at the beginning
+add_newline = true
+
+# Show the username.
+[username]
+show_always = true
+style_user = "bg:#0c4347 fg:#75b3b7"
+style_root = "bg:#00b6ba"
+format = '[$user ]($style)'
+disabled = false
+
+# Display OS
+[os]
+style = "bg:#0c4347"
+disabled = false # Disabled by default
+
+# Insert a symbol of your OS to the prompt. This is all symbols added.
+# You can add text also within this double quotes.
+# That is, instead of the Arch Linux icon, you can get
+# " 󰣇  I use Arch BTW "
+[os.symbols]
+AlmaLinux = " "
+Alpine = " "
+Android = " "
+Arch = "󰣇 "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+Kali = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mint = "󰣭 "
+NetBSD = "🚩 "
+NixOS = "󱄅 "
+Nobara = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = "󰫼 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = " "
+
+# Show the directory details. Some directory, like the main ones are
+# substituted with icons in the next sections.
+[directory]
+style = "bg:#75b3b7 fg:#0c4347"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Popular directories like Downloads, Documents, etc. are substituted
+# with icons. This reduces space usage. You can add your own icons, given
+# Nerd fonts are installed on your system.
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# Display the git branch details, like master bracnch.
+[git_branch]
+symbol = ""
+style = "bg:#57FFFF fg:#000000"
+format = '[ $symbol $branch ]($style)'
+
+# Display git status. This and the above show any visible output
+# only if the current directory is initialized as a git directory.
+# All other directories will not show this part.
+# If you have background colors set for these, in the absence of git
+# directory, they still appear in the prompt, empty.
+[git_status]
+style = "bg:#57FFFF fg:#000000"
+format = '[$all_status$ahead_behind ]($style)'
+
+# Display time.
+[time]
+disabled = false
+time_format = "%b %d, %I:%M %P" # Hour:Minute Format
+style = "bg:#75b3b7 fg:#0c4347"
+format = "[ $time ]($style)"
+
+# Display command duration.
+# Minimum time to display is set to 2000ms (2s).
+# So, the prompt will display command duration only for commands that
+# are running for more than 2 seconds. This is to avoid printing
+# execution time for regular commands like ls and clear.
+[cmd_duration]
+disabled = false
+min_time = 2000
+style = 'bg:#0c4347 fg:#75b3b7'
+format = '[ Took $duration!]($style)'
