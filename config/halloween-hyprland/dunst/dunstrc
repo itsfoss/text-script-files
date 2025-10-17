@@ -1,0 +1,20 @@
+[global]
+frame_color = "#0c4347"
+separator_color= frame
+highlight = "#1e66f5"
+progress_bar_corner_radius = 10
+font = "Creepster"
+corner_radius = 50
+
+[urgency_low]
+background = "#75b3b7"
+foreground = "#0c4347"
+
+[urgency_normal]
+background = "#75b3b7"
+foreground = "#0c4347"
+
+[urgency_critical]
+background = "#a483b1"
+foreground = "#0c4347"
+frame_color = "#75b3b7"
