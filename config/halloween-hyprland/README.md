@@ -38,7 +38,7 @@ Change all the `Virtual-1` monitor references to your monitor name. In Hyprland,
 hyprctl monitors
 ```
 
-Now, copy the `hyprlock.conf`, and `hyprpaper.conf` file to `~/.config/hypr/` directory.
+Now, copy the `hyprlock.conf`, and `hyprpaper.lua` file to `~/.config/hypr/` directory.
 
 Open both the above file and change the monitor reference to your monitor name.
 
